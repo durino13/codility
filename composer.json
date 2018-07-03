@@ -1,0 +1,16 @@
+{
+    "name": "jmarusiak/toptal",
+    "description": "Codility tests",
+    "authors": [
+        {
+            "name": "Marušiak Juraj",
+            "email": "jmarusiak@cfh.sk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Yuma\\": "src/"
+        }
+    },
+        "require": {}
+}
