@@ -8,11 +8,12 @@ use Yuma\TaskFactory;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 // Load the lesson and the task
+$lesson = $_GET['lesson'];
 $taskName = $_GET['task'];
 
 // Load task
 $taskFactory = new TaskFactory();
-$task = $taskFactory->createTask($taskName);
+$task = $taskFactory->createTask($lesson, $taskName);
 
 // Print the URL
 $codility = new Codility();
@@ -23,4 +24,3 @@ echo $codility->getUrl($task) . '<br><br>';
 echo '<b>Solution:</b> <br><br>';
 $codility->createLesson()
     ->runTask($task);
-

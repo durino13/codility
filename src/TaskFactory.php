@@ -4,33 +4,40 @@
 namespace Yuma;
 
 use Exception;
-use Yuma\Lesson1\BinaryGap\BinaryGapTask;
-use Yuma\Lesson2\CyclicRotation\CyclickRotationTask;
 use Yuma\Lesson2\Needle\NeedleTask;
+use Yuma\Lesson1\BinaryGap\BinaryGapTask;
+
 
 class TaskFactory
 {
 
     /**
+     *
+     * Dynamically create a class instance
+     *
      * @param string $taskName
      * @return BinaryGapTask|NeedleTask
      * @throws Exception
      */
-    public function createTask(string $taskName)
+    public function createTask(int $lesson, string $taskName)
     {
-        if ($taskName === 'BinaryGapTask') {
-            return new BinaryGapTask();
-        }
+        $className = $this->getClassName($lesson, $taskName);
 
-        if ($taskName === 'NeedleTask') {
-            return new NeedleTask();
-        }
-
-        if ($taskName === 'CyclickRotationTask') {
-            return new CyclickRotationTask();
+        if (class_exists($className)) {
+            return new $className();
         }
 
         throw new Exception('Unknown task specified!');
+    }
+
+    /**
+     * @param string $taskName
+     * @return mixed
+     */
+    protected function getClassName(int $lesson, string $taskName)
+    {
+        $className = 'Yuma\Lesson' . $lesson . '\\' . $taskName . '\\' . $taskName . 'Task';
+        return $className;
     }
 
 }

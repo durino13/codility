@@ -4,7 +4,7 @@ namespace Yuma\Lesson2\CyclicRotation;
 
 use Yuma\Task;
 
-class CyclickRotationTask extends Task
+class CyclicRotationTask extends Task
 {
 
     public function run()
