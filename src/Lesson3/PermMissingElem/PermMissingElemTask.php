@@ -18,7 +18,7 @@ class PermMissingElemTask extends Task
     public function run()
     {
 
-        $input = [ 2, 3, 1, 5, 4, 7, 8, 6, 10];
+        $input = [ 3, 1, 5, 4, 7, 8, 6, 9, 10];
 
         $finder = new MissingElementFinder();
         var_dump($finder->findMissingElement($input));
