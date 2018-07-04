@@ -2,9 +2,22 @@
 
 namespace Yuma;
 
-interface Task
+use ReflectionClass;
+
+abstract class Task
 {
 
-    public function run();
+    abstract public function taskUrl();
+
+    abstract public function run();
+
+    /**
+     * @return string
+     * @throws \ReflectionException
+     */
+    public function getTaskName(): string
+    {
+        return (new ReflectionClass($this))->getShortName();
+    }
 
 }

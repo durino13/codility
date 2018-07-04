@@ -2,17 +2,21 @@
 
 namespace Yuma;
 
-use Yuma\Lesson;
-
 class Codility
 {
 
     /**
+     * @param Task $task
      * @return Lesson
      */
     public function createLesson(): Lesson
     {
         return new Lesson();
+    }
+
+    public function getUrl(Task $task): string
+    {
+        return '<a href="' . $task->taskUrl() . '">' . $task->getTaskName() . '</a>';
     }
 
 }

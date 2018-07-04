@@ -14,8 +14,13 @@ $taskName = $_GET['task'];
 $taskFactory = new TaskFactory();
 $task = $taskFactory->createTask($taskName);
 
+// Print the URL
+$codility = new Codility();
+echo '<b>Task link:</b> <br><br>';
+echo $codility->getUrl($task) . '<br><br>';
+
 // Run the task and the lesson
-(new Codility())
-    ->createLesson()
+echo '<b>Solution:</b> <br><br>';
+$codility->createLesson()
     ->runTask($task);
 
