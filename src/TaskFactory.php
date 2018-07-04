@@ -5,7 +5,7 @@ namespace Yuma;
 
 use Exception;
 use Yuma\Lesson1\BinaryGap\BinaryGapTask;
-use Yuma\Lesson2\CyclickRotationTask;
+use Yuma\Lesson2\CyclicRotation\CyclickRotationTask;
 use Yuma\Lesson2\Needle\NeedleTask;
 
 class TaskFactory

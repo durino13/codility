@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Yuma\Lesson2;
+namespace Yuma\Lesson2\CyclicRotation;
 
 // 31 minutes ..
 
@@ -36,6 +36,23 @@ class ArrayRotator
         }
 
         return $result;
+    }
+
+    /**
+     *
+     * Array must be within range -1000..1000
+     *
+     * @param array $arrayToValidate
+     * @return bool
+     */
+    public function validateArray(array $arrayToValidate): bool
+    {
+        foreach ($arrayToValidate as $item) {
+            if ($item > 1000 || $item < -1000) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
