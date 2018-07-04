@@ -10,7 +10,7 @@ class BinaryGapTask implements Task
     public function run()
     {
 
-        $number = 1000000;
+        $number = 1041;
 
         $binaryManager = new BinaryManager();
         $binaryString = $binaryManager->decimalToBinary($number);

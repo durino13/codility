@@ -18,7 +18,6 @@ class BinaryManager
     {
         $binaryString = '';
 
-        $index = 1;
         while ($number > 0) {
             list($number, $modulo) = $this->divide($number);
             $binaryString .= $modulo;
