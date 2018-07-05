@@ -24,9 +24,8 @@ class CyclicRotationTask extends Task
     /**
      * @return string
      */
-    public function taskUrl()
+    public function assignmentUrl()
     {
         return 'https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/';
     }
-
 }

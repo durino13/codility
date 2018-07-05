@@ -16,7 +16,7 @@ class Codility
 
     public function getUrl(Task $task): string
     {
-        return '<a href="' . $task->taskUrl() . '">' . $task->getTaskName() . '</a>';
+        return '<a href="' . $task->assignmentUrl() . '">' . $task->getTaskName() . '</a>';
     }
 
 }

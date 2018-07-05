@@ -7,7 +7,7 @@ use Yuma\Task;
 class FrogRiverOneTask extends Task
 {
 
-    public function taskUrl()
+    public function assignmentUrl()
     {
         return 'https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/';
     }
@@ -25,4 +25,5 @@ class FrogRiverOneTask extends Task
         var_dump($quickestTimeCalculator->getTheQuickestTime($x, $a));;
 
     }
+
 }

@@ -10,7 +10,7 @@ class PermMissingElemTask extends Task
     /**
      * @return string
      */
-    public function taskUrl(): string
+    public function assignmentUrl(): string
     {
         return 'https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/';
     }

@@ -19,10 +19,7 @@ class BinaryGapTask extends Task
         echo 'The binary gap for number ' . $number . ' (' . $binaryString . ') is: ' . $gap;
     }
 
-    /**
-     * @return string
-     */
-    public function taskUrl()
+    public function assignmentUrl()
     {
         return 'https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/';
     }

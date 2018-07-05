@@ -7,7 +7,7 @@ use Yuma\Task;
 class FrogJmpTask extends Task
 {
 
-    public function taskUrl()
+    public function assignmentUrl()
     {
         return 'https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/';
     }
@@ -21,4 +21,5 @@ class FrogJmpTask extends Task
         $finder = new ShortestPathFinder();
         var_dump($finder->findShortestPath($x, $y, $jump));
     }
+
 }

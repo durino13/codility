@@ -7,9 +7,13 @@ use ReflectionClass;
 abstract class Task
 {
 
-    abstract public function taskUrl();
-
+    abstract public function assignmentUrl();
     abstract public function run();
+
+    public function taskUrl(): string
+    {
+        return '?lesson=1&task=BinaryGap';
+    }
 
     /**
      * @return string
