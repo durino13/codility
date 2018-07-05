@@ -14,7 +14,6 @@ class FrogJmpTask extends Task
 
     public function run()
     {
-
         $x = 10;
         $y = 71;
         $jump = 30;
